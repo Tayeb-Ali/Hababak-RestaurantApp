@@ -1,4 +1,4 @@
-package com.hababk.appstore.fragment;
+package com.hababk.restaurant.fragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,15 +11,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hababk.appstore.R;
-import com.hababk.appstore.activity.BankDetailActivity;
-import com.hababk.appstore.activity.EarningsActivity;
-import com.hababk.appstore.activity.ProfileActivity;
-import com.hababk.appstore.activity.ReviewActivity;
-import com.hababk.appstore.activity.SplashActivity;
-import com.hababk.appstore.activity.SupportActivity;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.activity.BankDetailActivity;
+import com.hababk.restaurant.activity.EarningsActivity;
+import com.hababk.restaurant.activity.ProfileActivity;
+import com.hababk.restaurant.activity.ReviewActivity;
+import com.hababk.restaurant.activity.SplashActivity;
+import com.hababk.restaurant.activity.SupportActivity;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 /**
  * Created by user on 1/28/2018.

@@ -1,4 +1,4 @@
-package com.hababk.appstore.fragment;
+package com.hababk.restaurant.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hababk.appstore.R;
+import com.hababk.restaurant.R;
 
 /**
  * Created by a_man on 14-03-2018.

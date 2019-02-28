@@ -1,4 +1,4 @@
-package com.hababk.appstore.utils;
+package com.hababk.restaurant.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

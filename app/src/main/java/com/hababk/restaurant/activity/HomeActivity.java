@@ -1,4 +1,4 @@
-package com.hababk.appstore.activity;
+package com.hababk.restaurant.activity;
 
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
@@ -11,20 +11,20 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.hababk.appstore.R;
-import com.hababk.appstore.adapter.UniversalPagerAdapter;
-import com.hababk.appstore.fragment.AccountFragment;
-import com.hababk.appstore.fragment.ItemsFragment;
-import com.hababk.appstore.fragment.OrderFragment;
-import com.hababk.appstore.fragment.OrdersFragment;
-import com.hababk.appstore.model.User;
-import com.hababk.appstore.network.ApiUtils;
-import com.hababk.appstore.network.ChefStoreService;
-import com.hababk.appstore.network.request.FcmTokenUpdateRequest;
-import com.hababk.appstore.network.response.ChefProfile;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
-import com.hababk.appstore.view.NonSwipeableViewPager;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.adapter.UniversalPagerAdapter;
+import com.hababk.restaurant.fragment.AccountFragment;
+import com.hababk.restaurant.fragment.ItemsFragment;
+import com.hababk.restaurant.fragment.OrderFragment;
+import com.hababk.restaurant.fragment.OrdersFragment;
+import com.hababk.restaurant.model.User;
+import com.hababk.restaurant.network.ApiUtils;
+import com.hababk.restaurant.network.ChefStoreService;
+import com.hababk.restaurant.network.request.FcmTokenUpdateRequest;
+import com.hababk.restaurant.network.response.ChefProfile;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.view.NonSwipeableViewPager;
 
 import retrofit2.Call;
 import retrofit2.Callback;

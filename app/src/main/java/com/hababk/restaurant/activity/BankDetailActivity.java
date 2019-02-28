@@ -1,4 +1,4 @@
-package com.hababk.appstore.activity;
+package com.hababk.restaurant.activity;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,13 +14,13 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.hababk.appstore.R;
-import com.hababk.appstore.network.ApiUtils;
-import com.hababk.appstore.network.ChefStoreService;
-import com.hababk.appstore.network.request.BankDetailRequest;
-import com.hababk.appstore.network.response.BankDetailResponse;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.network.ApiUtils;
+import com.hababk.restaurant.network.ChefStoreService;
+import com.hababk.restaurant.network.request.BankDetailRequest;
+import com.hababk.restaurant.network.response.BankDetailResponse;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 import retrofit2.Call;
 import retrofit2.Callback;

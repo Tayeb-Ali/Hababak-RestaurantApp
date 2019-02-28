@@ -1,7 +1,7 @@
-package com.hababk.appstore.network.request;
+package com.hababk.restaurant.network.request;
 
-import com.hababk.appstore.network.response.MenuItem;
-import com.hababk.appstore.network.response.MenuItemCategory;
+import com.hababk.restaurant.network.response.MenuItem;
+import com.hababk.restaurant.network.response.MenuItemCategory;
 
 import java.util.ArrayList;
 

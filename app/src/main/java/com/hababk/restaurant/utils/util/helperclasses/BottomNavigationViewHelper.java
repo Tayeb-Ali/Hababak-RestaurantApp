@@ -1,4 +1,4 @@
-package com.hababk.appstore.utils.util.helperclasses;
+package com.hababk.restaurant.utils.util.helperclasses;
 
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
@@ -7,9 +7,6 @@ import android.util.Log;
 
 import java.lang.reflect.Field;
 
-/**
- * Created by user on 1/30/2018.
- */
 
 public class BottomNavigationViewHelper {
 

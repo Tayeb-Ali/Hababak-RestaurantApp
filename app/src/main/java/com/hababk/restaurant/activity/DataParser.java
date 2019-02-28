@@ -1,4 +1,4 @@
-package com.hababk.appstore.activity;
+package com.hababk.restaurant.activity;
 
 import com.google.android.gms.maps.model.LatLng;
 

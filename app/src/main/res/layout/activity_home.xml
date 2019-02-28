@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hababk.appstore.activity.HomeActivity">
+    tools:context="com.hababk.restaurant.activity.HomeActivity">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -29,7 +29,7 @@
             android:visibility="gone" />
     </android.support.v7.widget.Toolbar>
 
-    <com.hababk.appstore.view.NonSwipeableViewPager
+    <com.hababk.restaurant.view.NonSwipeableViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

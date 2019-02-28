@@ -1,4 +1,4 @@
-package com.hababk.appstore.adapter;
+package com.hababk.restaurant.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -12,10 +12,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.hababk.appstore.R;
-import com.hababk.appstore.network.response.Earning;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.network.response.Earning;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

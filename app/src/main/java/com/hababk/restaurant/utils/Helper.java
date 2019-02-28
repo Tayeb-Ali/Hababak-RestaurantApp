@@ -1,4 +1,4 @@
-package com.hababk.appstore.utils;
+package com.hababk.restaurant.utils;
 
 import android.content.Context;
 import android.text.format.DateUtils;
@@ -7,14 +7,14 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.hababk.appstore.model.User;
-import com.hababk.appstore.network.ApiUtils;
-import com.hababk.appstore.network.ChefStoreService;
-import com.hababk.appstore.network.response.BankDetailResponse;
-import com.hababk.appstore.network.response.BaseListModel;
-import com.hababk.appstore.network.response.ChefProfile;
-import com.hababk.appstore.network.response.MenuItemCategory;
-import com.hababk.appstore.network.response.SettingResponse;
+import com.hababk.restaurant.model.User;
+import com.hababk.restaurant.network.ApiUtils;
+import com.hababk.restaurant.network.ChefStoreService;
+import com.hababk.restaurant.network.response.BankDetailResponse;
+import com.hababk.restaurant.network.response.BaseListModel;
+import com.hababk.restaurant.network.response.ChefProfile;
+import com.hababk.restaurant.network.response.MenuItemCategory;
+import com.hababk.restaurant.network.response.SettingResponse;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

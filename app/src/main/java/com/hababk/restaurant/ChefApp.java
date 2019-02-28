@@ -1,4 +1,4 @@
-package com.hababk.appstore;
+package com.hababk.restaurant;
 
 import android.app.Application;
 

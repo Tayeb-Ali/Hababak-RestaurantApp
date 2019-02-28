@@ -1,4 +1,4 @@
-package com.hababk.appstore.activity;
+package com.hababk.restaurant.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,14 +15,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hababk.appstore.R;
-import com.hababk.appstore.model.User;
-import com.hababk.appstore.network.ApiUtils;
-import com.hababk.appstore.network.ChefStoreService;
-import com.hababk.appstore.network.request.SupportRequest;
-import com.hababk.appstore.network.response.SupportResponse;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.model.User;
+import com.hababk.restaurant.network.ApiUtils;
+import com.hababk.restaurant.network.ChefStoreService;
+import com.hababk.restaurant.network.request.SupportRequest;
+import com.hababk.restaurant.network.response.SupportResponse;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.hababk.appstore.activity.AddItemActivity">
+    tools:context="com.hababk.restaurant.activity.AddItemActivity">
 
     <include layout="@layout/toolbar" />
 
@@ -44,7 +44,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp8"
-                        android:text="Upload Item Image"
+                        android:text="@string/upload_item_image"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/dp16"
                     android:fontFamily="@font/roboto"
-                    android:hint="Item name"
+                    android:hint="@string/item_name"
                     android:inputType="text"
                     android:textSize="16sp" />
 
@@ -95,7 +95,7 @@
                     android:ellipsize="marquee"
                     android:padding="@dimen/dp4"
                     android:singleLine="true"
-                    android:text="Choose item category"
+                    android:text="@string/choose_item_category"
                     android:textSize="16sp" />
 
                 <EditText
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/dp16"
                     android:fontFamily="@font/roboto"
-                    android:hint="Short Description"
+                    android:hint="@string/short_description"
                     android:inputType="text"
                     android:textSize="16sp" />
 
@@ -120,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/roboto"
-                        android:hint="Price in"
+                        android:hint="@string/price_in"
                         android:inputType="number"
                         android:textSize="16sp" />
 
@@ -129,7 +129,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
-                        android:text="Avilable?"
+                        android:text="@string/avilable"
                         android:theme="@style/SwitchCompatGreen" />
 
                 </LinearLayout>
@@ -140,7 +140,7 @@
                     android:layout_height="96dp"
                     android:fontFamily="@font/roboto"
                     android:gravity="start"
-                    android:hint="Detailed specifications"
+                    android:hint="@string/detailed_specifications"
                     android:inputType="textMultiLine"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -161,7 +161,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background_red"
-            android:text="Add Item"
+            android:text="@string/add_item"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp" />

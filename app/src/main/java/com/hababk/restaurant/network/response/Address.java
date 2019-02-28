@@ -1,4 +1,4 @@
-package com.hababk.appstore.network.response;
+package com.hababk.restaurant.network.response;
 
 import android.os.Parcel;
 import android.os.Parcelable;

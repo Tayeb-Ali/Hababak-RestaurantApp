@@ -1,4 +1,4 @@
-package com.hababk.appstore.fragment;
+package com.hababk.restaurant.fragment;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.hababk.appstore.R;
-import com.hababk.appstore.adapter.CategoryAdapter;
-import com.hababk.appstore.network.response.MenuItemCategory;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.adapter.CategoryAdapter;
+import com.hababk.restaurant.network.response.MenuItemCategory;
 
 import java.util.ArrayList;
 

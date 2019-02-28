@@ -1,4 +1,4 @@
-package com.hababk.appstore.network.request;
+package com.hababk.restaurant.network.request;
 
 public class FcmTokenUpdateRequest {
     private String fcm_registration_id;

@@ -1,4 +1,4 @@
-package com.hababk.appstore.activity;
+package com.hababk.restaurant.activity;
 
 import android.content.DialogInterface;
 import android.support.v4.app.FragmentTransaction;
@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.hababk.appstore.R;
-import com.hababk.appstore.fragment.LoginSignUpTabFragment;
-import com.hababk.appstore.fragment.VerificationCodeFragment;
-import com.hababk.appstore.utils.IntentKeyConstants;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.fragment.LoginSignUpTabFragment;
+import com.hababk.restaurant.fragment.VerificationCodeFragment;
+import com.hababk.restaurant.utils.IntentKeyConstants;
 
 public class LoginSignUpActivity extends AppCompatActivity {
     private int tabPosition;

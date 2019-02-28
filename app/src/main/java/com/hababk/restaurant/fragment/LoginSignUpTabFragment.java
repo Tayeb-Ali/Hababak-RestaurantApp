@@ -1,4 +1,4 @@
-package com.hababk.appstore.fragment;
+package com.hababk.restaurant.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hababk.appstore.R;
-import com.hababk.appstore.adapter.ViewPagerAdapter;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.adapter.ViewPagerAdapter;
 
 /**
  * Created by user on 1/28/2018.

@@ -1,4 +1,4 @@
-package com.hababk.appstore.network;
+package com.hababk.restaurant.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

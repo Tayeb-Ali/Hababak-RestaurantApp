@@ -1,4 +1,4 @@
-package com.hababk.appstore.activity;
+package com.hababk.restaurant.activity;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -33,16 +33,16 @@ import com.kbeanie.multipicker.api.ImagePicker;
 import com.kbeanie.multipicker.api.Picker;
 import com.kbeanie.multipicker.api.callbacks.ImagePickerCallback;
 import com.kbeanie.multipicker.api.entity.ChosenImage;
-import com.hababk.appstore.R;
-import com.hababk.appstore.fragment.CategorySelectionDialog;
-import com.hababk.appstore.network.ApiUtils;
-import com.hababk.appstore.network.ChefStoreService;
-import com.hababk.appstore.network.request.MenuItemCreateRequest;
-import com.hababk.appstore.network.response.MenuItemCategory;
-import com.hababk.appstore.utils.Constants;
-import com.hababk.appstore.utils.FirebaseUploader;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.fragment.CategorySelectionDialog;
+import com.hababk.restaurant.network.ApiUtils;
+import com.hababk.restaurant.network.ChefStoreService;
+import com.hababk.restaurant.network.request.MenuItemCreateRequest;
+import com.hababk.restaurant.network.response.MenuItemCategory;
+import com.hababk.restaurant.utils.Constants;
+import com.hababk.restaurant.utils.FirebaseUploader;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -75,7 +75,7 @@ public class AddItemActivity extends AppCompatActivity implements ImagePickerCal
 
     private final int REQUEST_CODE_PERMISSION = 55;
 
-    private com.hababk.appstore.network.response.MenuItem menuItemToEdit;
+    private com.hababk.restaurant.network.response.MenuItem menuItemToEdit;
     private ArrayList<MenuItemCategory> categories, selectedCategories = new ArrayList<>();
 
     @Override
@@ -198,9 +198,9 @@ public class AddItemActivity extends AppCompatActivity implements ImagePickerCal
     private void createUpdateItem(MenuItemCreateRequest itemCreateRequest) {
         setItemCreateProgress(true);
         if (menuItemToEdit != null) {
-            ApiUtils.getClient().create(ChefStoreService.class).updateMenuItem(Helper.getApiToken(sharedPreferenceUtil), itemCreateRequest, menuItemToEdit.getId()).enqueue(new Callback<com.hababk.appstore.network.response.MenuItem>() {
+            ApiUtils.getClient().create(ChefStoreService.class).updateMenuItem(Helper.getApiToken(sharedPreferenceUtil), itemCreateRequest, menuItemToEdit.getId()).enqueue(new Callback<com.hababk.restaurant.network.response.MenuItem>() {
                 @Override
-                public void onResponse(Call<com.hababk.appstore.network.response.MenuItem> call, Response<com.hababk.appstore.network.response.MenuItem> response) {
+                public void onResponse(Call<com.hababk.restaurant.network.response.MenuItem> call, Response<com.hababk.restaurant.network.response.MenuItem> response) {
                     setItemCreateProgress(false);
                     if (response.isSuccessful()) {
                         sharedPreferenceUtil.setBooleanPreference(Constants.KEY_REFRESH_ITEMS, true);
@@ -212,15 +212,15 @@ public class AddItemActivity extends AppCompatActivity implements ImagePickerCal
                 }
 
                 @Override
-                public void onFailure(Call<com.hababk.appstore.network.response.MenuItem> call, Throwable t) {
+                public void onFailure(Call<com.hababk.restaurant.network.response.MenuItem> call, Throwable t) {
                     setItemCreateProgress(false);
                     Toast.makeText(AddItemActivity.this, "Item update failed", Toast.LENGTH_SHORT).show();
                 }
             });
         } else {
-            ApiUtils.getClient().create(ChefStoreService.class).createMenuItem(Helper.getApiToken(sharedPreferenceUtil), itemCreateRequest).enqueue(new Callback<com.hababk.appstore.network.response.MenuItem>() {
+            ApiUtils.getClient().create(ChefStoreService.class).createMenuItem(Helper.getApiToken(sharedPreferenceUtil), itemCreateRequest).enqueue(new Callback<com.hababk.restaurant.network.response.MenuItem>() {
                 @Override
-                public void onResponse(Call<com.hababk.appstore.network.response.MenuItem> call, Response<com.hababk.appstore.network.response.MenuItem> response) {
+                public void onResponse(Call<com.hababk.restaurant.network.response.MenuItem> call, Response<com.hababk.restaurant.network.response.MenuItem> response) {
                     setItemCreateProgress(false);
                     if (response.isSuccessful()) {
                         sharedPreferenceUtil.setBooleanPreference(Constants.KEY_REFRESH_ITEMS, true);
@@ -232,7 +232,7 @@ public class AddItemActivity extends AppCompatActivity implements ImagePickerCal
                 }
 
                 @Override
-                public void onFailure(Call<com.hababk.appstore.network.response.MenuItem> call, Throwable t) {
+                public void onFailure(Call<com.hababk.restaurant.network.response.MenuItem> call, Throwable t) {
                     setItemCreateProgress(false);
                     Toast.makeText(AddItemActivity.this, "Item creation failed", Toast.LENGTH_SHORT).show();
                 }
@@ -418,7 +418,7 @@ public class AddItemActivity extends AppCompatActivity implements ImagePickerCal
                         ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
 
-    public static Intent newIntent(Context context, com.hababk.appstore.network.response.MenuItem menuItem) {
+    public static Intent newIntent(Context context, com.hababk.restaurant.network.response.MenuItem menuItem) {
         Intent intent = new Intent(context, AddItemActivity.class);
         intent.putExtra(DATA_MENU_ITEM, menuItem);
         return intent;

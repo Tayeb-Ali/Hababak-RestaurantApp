@@ -1,4 +1,4 @@
-package com.hababk.appstore.service;
+package com.hababk.restaurant.service;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -13,8 +13,8 @@ import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.hababk.appstore.R;
-import com.hababk.appstore.activity.OrderDetailActivity;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.activity.OrderDetailActivity;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private final String TAG = MyFirebaseMessagingService.class.getSimpleName();

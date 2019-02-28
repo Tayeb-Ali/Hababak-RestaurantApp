@@ -1,8 +1,8 @@
-package com.hababk.appstore.network.response;
+package com.hababk.restaurant.network.response;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.hababk.appstore.model.User;
+import com.hababk.restaurant.model.User;
 
 /**
  * Created by a_man on 12-03-2018.

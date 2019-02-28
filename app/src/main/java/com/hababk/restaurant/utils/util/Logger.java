@@ -1,8 +1,8 @@
-package com.hababk.appstore.utils.util;
+package com.hababk.restaurant.utils.util;
 
 import android.util.Log;
 
-import com.hababk.appstore.BuildConfig;
+import com.hababk.restaurant.BuildConfig;
 
 
 /**

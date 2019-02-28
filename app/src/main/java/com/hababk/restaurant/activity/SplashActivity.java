@@ -1,4 +1,4 @@
-package com.hababk.appstore.activity;
+package com.hababk.restaurant.activity;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -11,10 +11,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
-import com.hababk.appstore.R;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.IntentKeyConstants;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.IntentKeyConstants;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 public class SplashActivity extends AppCompatActivity {
     private SharedPreferenceUtil sharedPreferenceUtil;

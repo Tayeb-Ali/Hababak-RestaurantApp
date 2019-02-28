@@ -1,4 +1,4 @@
-package com.hababk.appstore.adapter;
+package com.hababk.restaurant.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -13,14 +13,14 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.hababk.appstore.R;
-import com.hababk.appstore.activity.AddItemActivity;
-import com.hababk.appstore.network.ApiUtils;
-import com.hababk.appstore.network.ChefStoreService;
-import com.hababk.appstore.network.request.MenuItemCreateRequest;
-import com.hababk.appstore.network.response.MenuItem;
-import com.hababk.appstore.utils.Helper;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.activity.AddItemActivity;
+import com.hababk.restaurant.network.ApiUtils;
+import com.hababk.restaurant.network.ChefStoreService;
+import com.hababk.restaurant.network.request.MenuItemCreateRequest;
+import com.hababk.restaurant.network.response.MenuItem;
+import com.hababk.restaurant.utils.Helper;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 import java.util.ArrayList;
 

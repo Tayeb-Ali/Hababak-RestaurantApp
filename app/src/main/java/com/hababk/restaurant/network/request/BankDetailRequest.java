@@ -1,4 +1,4 @@
-package com.hababk.appstore.network.request;
+package com.hababk.restaurant.network.request;
 
 /**
  * Created by a_man on 14-03-2018.

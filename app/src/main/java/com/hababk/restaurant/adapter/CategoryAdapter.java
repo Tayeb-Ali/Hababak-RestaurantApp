@@ -1,4 +1,4 @@
-package com.hababk.appstore.adapter;
+package com.hababk.restaurant.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hababk.appstore.R;
-import com.hababk.appstore.network.response.MenuItemCategory;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.network.response.MenuItemCategory;
 
 import java.util.ArrayList;
 

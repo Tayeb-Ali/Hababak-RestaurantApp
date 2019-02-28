@@ -1,4 +1,4 @@
-package com.hababk.appstore.utils;
+package com.hababk.restaurant.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

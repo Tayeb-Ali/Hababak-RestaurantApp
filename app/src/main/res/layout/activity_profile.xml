@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical"
-    tools:context="com.hababk.appstore.activity.AddItemActivity">
+    tools:context="com.hababk.restaurant.activity.AddItemActivity">
 
     <include layout="@layout/toolbar" />
 
@@ -325,22 +325,22 @@
                                 </android.support.design.widget.TextInputLayout>
 
                                 <TextView
-                                    android:id="@+id/getLocation"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="bottom"
-                                    android:layout_marginStart="@dimen/dp4"
-                                    android:layout_marginLeft="@dimen/dp4"
-                                    android:layout_marginBottom="@dimen/dp4"
-                                    android:background="@drawable/round_border_primary"
-                                    android:paddingLeft="@dimen/dp12"
-                                    android:paddingTop="@dimen/dp4"
-                                    android:paddingRight="@dimen/dp12"
-                                    android:paddingBottom="@dimen/dp4"
-                                    android:text="Add via Map"
-                                    android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="16sp"
-                                    android:textStyle="bold" />
+                                        android:id="@+id/getLocation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginStart="@dimen/dp4"
+                                        android:layout_marginLeft="@dimen/dp4"
+                                        android:layout_marginBottom="@dimen/dp4"
+                                        android:background="@drawable/round_border_primary"
+                                        android:paddingLeft="@dimen/dp12"
+                                        android:paddingTop="@dimen/dp4"
+                                        android:paddingRight="@dimen/dp12"
+                                        android:paddingBottom="@dimen/dp4"
+                                        android:text="Add via Map"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"/>
                             </LinearLayout>
 
                             <EditText

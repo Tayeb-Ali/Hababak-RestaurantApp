@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:571962375784:android:939b1445434b1b5c",
+        "mobilesdk_app_id": "1:571962375784:android:2f74d3aa3e91e638",
         "android_client_info": {
-          "package_name": "com.hababk.appstore"
+          "package_name": "com.hababk.delivery"
         }
       },
       "oauth_client": [
@@ -31,6 +31,50 @@
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571962375784:android:ae2c2e8b09154fe3",
+        "android_client_info": {
+          "package_name": "com.hababk.restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571962375784-n8gvk8e3864p5lmd2mp3sdcm96vbc4mk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hababk.restaurant",
+            "certificate_hash": "4e20931041fed922bd39e3116e302b4cb194bd78"
+          }
+        },
+        {
+          "client_id": "571962375784-doap9fhc2q0rqtdmu4gujtj1fl04ri8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1SSpUXdsEm9nxy8c3XJcMYeLLILXJoo8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571962375784-doap9fhc2q0rqtdmu4gujtj1fl04ri8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

@@ -1,4 +1,4 @@
-package com.hababk.appstore.utils.pojoclasses;
+package com.hababk.restaurant.utils.pojoclasses;
 
 /**
  * Created by user on 2/2/2018.

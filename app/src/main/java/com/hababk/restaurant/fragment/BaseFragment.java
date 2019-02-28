@@ -1,4 +1,4 @@
-package com.hababk.appstore.fragment;
+package com.hababk.restaurant.fragment;
 
 import android.support.v4.app.Fragment;
 import android.widget.Toast;

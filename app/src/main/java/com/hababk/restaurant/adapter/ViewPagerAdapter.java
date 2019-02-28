@@ -1,4 +1,4 @@
-package com.hababk.appstore.adapter;
+package com.hababk.restaurant.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

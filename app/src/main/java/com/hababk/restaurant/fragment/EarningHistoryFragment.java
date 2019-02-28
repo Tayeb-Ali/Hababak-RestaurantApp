@@ -1,15 +1,15 @@
-package com.hababk.appstore.fragment;
+package com.hababk.restaurant.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.hababk.appstore.activity.EarningsActivity;
-import com.hababk.appstore.adapter.HistoryAdapter;
-import com.hababk.appstore.network.response.Earning;
-import com.hababk.appstore.network.response.EarningResponse;
-import com.hababk.appstore.utils.Helper;
+import com.hababk.restaurant.activity.EarningsActivity;
+import com.hababk.restaurant.adapter.HistoryAdapter;
+import com.hababk.restaurant.network.response.Earning;
+import com.hababk.restaurant.network.response.EarningResponse;
+import com.hababk.restaurant.utils.Helper;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.hababk.appstore.fragment;
+package com.hababk.restaurant.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.hababk.appstore.R;
-import com.hababk.appstore.activity.AddItemActivity;
-import com.hababk.appstore.adapter.UniversalPagerAdapter;
-import com.hababk.appstore.utils.Constants;
-import com.hababk.appstore.utils.SharedPreferenceUtil;
+import com.hababk.restaurant.R;
+import com.hababk.restaurant.activity.AddItemActivity;
+import com.hababk.restaurant.adapter.UniversalPagerAdapter;
+import com.hababk.restaurant.utils.Constants;
+import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 /**
  * Created by user on 1/28/2018.

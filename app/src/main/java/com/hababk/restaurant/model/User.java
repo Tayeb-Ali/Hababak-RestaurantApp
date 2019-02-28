@@ -1,4 +1,4 @@
-package com.hababk.appstore.model;
+package com.hababk.restaurant.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

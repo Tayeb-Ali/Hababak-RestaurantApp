@@ -1,4 +1,4 @@
-package com.hababk.appstore.model;
+package com.hababk.restaurant.model;
 
 public class Country {
     private String code;

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical"
-    tools:context="com.hababk.appstore.activity.ReviewActivity">
+    tools:context="com.hababk.restaurant.activity.ReviewActivity">
 
     <include layout="@layout/toolbar" />
 
