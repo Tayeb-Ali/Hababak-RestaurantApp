@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp16">
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp32"
+            android:paddingTop="@dimen/dp16"
+            android:drawableLeft="@drawable/ic_person_primary_24dp"
+            android:drawablePadding="@dimen/dp16"
+            android:text="Profile"
+            android:textColor="@color/colorDarkText4"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_person_primary_24dp" />
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp32"
+            android:drawableLeft="@drawable/ic_thumb_up_primary_24dp"
+            android:drawablePadding="@dimen/dp16"
+            android:text="Review"
+            android:textColor="@color/colorDarkText4"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_thumb_up_primary_24dp" />
+
+        <TextView
+            android:id="@+id/documents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp32"
+            android:drawableLeft="@drawable/ic_assignment_turned_in_primary_24dp"
+            android:drawablePadding="@dimen/dp16"
+            android:text="Documents"
+            android:textColor="@color/colorDarkText4"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:drawableStart="@drawable/ic_assignment_turned_in_primary_24dp" />
+
+        <TextView
+            android:id="@+id/bankDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp32"
+            android:drawableLeft="@drawable/ic_account_balance_primary_24dp"
+            android:drawablePadding="@dimen/dp16"
+            android:text="Bank details"
+            android:textColor="@color/colorDarkText4"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_account_balance_primary_24dp" />
+
+        <TextView
+            android:id="@+id/earnings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp32"
+            android:drawableLeft="@drawable/ic_account_balance_wallet_primary_24dp"
+            android:drawablePadding="@dimen/dp16"
+            android:text="Earnings"
+            android:textColor="@color/colorDarkText4"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_account_balance_wallet_primary_24dp" />
+
+        <TextView
+            android:id="@+id/support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp32"
+            android:drawableLeft="@drawable/ic_email_primary_24dp"
+            android:drawablePadding="@dimen/dp16"
+            android:text="Support"
+            android:textColor="@color/colorDarkText4"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_email_primary_24dp" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/setting"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/dp32"-->
+            <!--android:drawableLeft="@drawable/ic_settings_primary_24dp"-->
+            <!--android:drawablePadding="@dimen/dp16"-->
+            <!--android:text="Settings"-->
+            <!--android:textColor="@color/colorDarkText4"-->
+            <!--android:textSize="18sp" />-->
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp32"
+            android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
+            android:drawablePadding="@dimen/dp16"
+            android:text="Logout"
+            android:textColor="@color/colorDarkText4"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_exit_to_app_black_24dp" />
+    </LinearLayout>
+
+</ScrollView>

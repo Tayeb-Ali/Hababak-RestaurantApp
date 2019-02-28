@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/mar_10">
+
+        <ImageView
+            android:id="@+id/verification_code_back_iv"
+            android:layout_width="@dimen/mar_30"
+            android:layout_height="@dimen/mar_30"
+            android:src="@drawable/ic_arrow_left_white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Verification Code"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize20sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mar_2"
+        android:layout_marginLeft="96dp"
+        android:layout_marginRight="96dp"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mar_20"
+        android:layout_marginLeft="@dimen/mar_30"
+        android:layout_marginRight="@dimen/mar_30"
+        android:layout_marginTop="@dimen/mar_30">
+
+        <TextView
+            android:id="@+id/verification_code_text_1_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="Please type the Verification Code "
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/textSize14sp" />
+
+        <TextView
+            android:id="@+id/verification_code_text_2_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_code_text_1_tv"
+            android:gravity="center"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/textSize14sp" />
+
+        <LinearLayout
+            android:id="@+id/verification_code_et_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_code_text_2_tv"
+            android:layout_marginLeft="@dimen/mar_20"
+            android:layout_marginRight="@dimen/mar_20"
+            android:layout_marginTop="@dimen/mar_5"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etOtp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="enter otp here"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/verification_code_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_40"
+            android:layout_below="@+id/verification_code_et_view"
+            android:layout_marginTop="@dimen/mar_30"
+            android:background="@drawable/button_background_red"
+            android:text="Verify now"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textSize="@dimen/textSize16sp" />
+
+        <TextView
+            android:id="@+id/timeLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_code_btn"
+            android:layout_marginTop="@dimen/mar_30"
+            android:padding="@dimen/dp4"
+            android:textSize="@dimen/textSize14sp" />
+
+        <TextView
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/verification_code_btn"
+            android:layout_marginTop="@dimen/mar_30"
+            android:padding="@dimen/dp4"
+            android:text="Resend"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSize14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

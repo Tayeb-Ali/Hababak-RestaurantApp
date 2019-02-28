@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hababk.appstore.activity.AddItemActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="148dp">
+
+                <LinearLayout
+                    android:id="@+id/restImagePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/camera_image_background"
+                        android:padding="@dimen/dp16"
+                        android:src="@drawable/ic_camera_gray_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:text="Upload Item Image"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/restImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ProgressBar
+                    android:id="@+id/itemImageProgress"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp16">
+
+                <EditText
+                    android:id="@+id/itemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:fontFamily="@font/roboto"
+                    android:hint="Item name"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/itemVegNon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:entries="@array/item_veg_non" />
+
+                <TextView
+                    android:id="@+id/itemCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:ellipsize="marquee"
+                    android:padding="@dimen/dp4"
+                    android:singleLine="true"
+                    android:text="Choose item category"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/itemDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:fontFamily="@font/roboto"
+                    android:hint="Short Description"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/itemPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Price in"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/itemAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Avilable?"
+                        android:theme="@style/SwitchCompatGreen" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/itemSpecification"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="start"
+                    android:hint="Detailed specifications"
+                    android:inputType="textMultiLine"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp16">
+
+        <include layout="@layout/progress_bar_horizontal" />
+
+        <Button
+            android:id="@+id/itemSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background_red"
+            android:text="Add Item"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

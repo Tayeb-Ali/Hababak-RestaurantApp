@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hababk.appstore.activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splashBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99111111"
+        android:padding="@dimen/dp16">
+
+        <ImageView
+            android:id="@+id/chef_logo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp32" />
+
+        <LinearLayout
+            android:id="@+id/authActionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <Button
+                android:id="@+id/splash_signin_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginLeft="@dimen/dp32"
+                android:layout_marginRight="@dimen/dp32"
+                android:background="@drawable/button_background_red"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/splash_register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp32"
+                android:layout_marginLeft="@dimen/dp32"
+                android:layout_marginRight="@dimen/dp32"
+                android:background="@drawable/button_background_white"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

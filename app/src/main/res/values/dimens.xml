@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="card_corner_radius">2dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="dp12">12dp</dimen>
+
+    <dimen name="textSize20sp">20sp</dimen>
+    <dimen name="textSize16sp">16sp</dimen>
+    <dimen name="textSize14sp">14sp</dimen>
+    <dimen name="textSize12sp">12sp</dimen>
+
+
+    <dimen name="mar_2">2dp</dimen>
+    <dimen name="mar_5">5dp</dimen>
+    <dimen name="mar_10">10dp</dimen>
+    <dimen name="mar_20">20dp</dimen>
+    <dimen name="mar_30">30dp</dimen>
+    <dimen name="mar_40">40dp</dimen>
+
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hababk.appstore.activity.HomeActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/PopupOverlay"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/PopupOverlay">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/onlineSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Go Online  "
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.hababk.appstore.view.NonSwipeableViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/home_navigation"
+        android:layout_below="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/home_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bottomNavOption1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_bar_item_selected"
+            android:drawablePadding="@dimen/dp4"
+            android:drawableTop="@drawable/ic_list_selected_24dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp8"
+            android:text="Orders"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bottomNavOption2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:drawablePadding="@dimen/dp4"
+            android:drawableTop="@drawable/ic_directions_bike_24dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp8"
+            android:text="Delivery"
+            android:textColor="@color/grayDark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bottomNavOption3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:drawablePadding="@dimen/dp4"
+            android:drawableTop="@drawable/ic_restaurant_menu_24dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp8"
+            android:text="Items"
+            android:textColor="@color/grayDark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bottomNavOption4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:drawablePadding="@dimen/dp4"
+            android:drawableTop="@drawable/ic_person_24dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp8"
+            android:text="Account"
+            android:textColor="@color/grayDark"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

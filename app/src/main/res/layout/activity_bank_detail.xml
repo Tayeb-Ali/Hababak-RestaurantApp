@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.hababk.appstore.activity.BankDetailActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp16">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Bank Account Detail"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Provide your bank detail where admin will deposit your earnings though food delivery app"
+                android:textColor="@color/colorDarkText2" />
+
+            <ProgressBar
+                android:id="@+id/bankDetailsLoadingProgress"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="@dimen/dp16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Holder Name"
+                android:textColor="@color/colorDarkText3" />
+
+            <EditText
+                android:id="@+id/bankHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp16"
+                android:fontFamily="@font/roboto"
+                android:hint="Account Holder Name"
+                android:inputType="text"
+                android:textColor="@color/colorDarkText4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Name"
+                android:textColor="@color/colorDarkText3" />
+
+            <EditText
+                android:id="@+id/bankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp16"
+                android:fontFamily="@font/roboto"
+                android:hint="Bank name"
+                android:inputType="text"
+                android:text=""
+                android:textColor="@color/colorDarkText4"
+                android:textSize="16sp" />
+
+            <!--<Spinner-->
+            <!--android:id="@+id/bank_detail_bank_name_spinner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/dp16"-->
+            <!--android:entries="@array/bank_names" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch Code"
+                android:textColor="@color/colorDarkText3" />
+
+            <EditText
+                android:id="@+id/bankBranchCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp16"
+                android:fontFamily="@font/roboto"
+                android:hint="Brnach Code"
+                android:inputType="text"
+                android:textColor="@color/colorDarkText4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:textColor="@color/colorDarkText3" />
+
+            <EditText
+                android:id="@+id/bankAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp16"
+                android:fontFamily="@font/roboto"
+                android:hint="Account Number"
+                android:inputType="number"
+                android:textColor="@color/colorDarkText4"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp16"
+        android:orientation="vertical">
+
+        <include layout="@layout/progress_bar_horizontal" />
+
+        <Button
+            android:id="@+id/bank_detail_update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background_red"
+            android:text="Update Info"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context="com.hababk.appstore.activity.AddItemActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/restDetailsLoadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp">
+
+                    <LinearLayout
+                        android:id="@+id/restImagePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/camera_image_background"
+                            android:padding="@dimen/dp16"
+                            android:src="@drawable/ic_camera_gray_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:text="Upload Restaurant Image"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/restImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <ProgressBar
+                        android:id="@+id/restImageProgress"
+                        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <android.support.v7.widget.CardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp16">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp8">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4"
+                                android:text="Restaurant Identity"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/restName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="Restaurant name here.."
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp16">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/restTagLine"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="Sweet tag line here.."
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4"
+                                android:text="Restaurant Hours"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/restHourOpen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="Opening time"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp16">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/restHourClose"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusableInTouchMode="false"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="Closing time"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4"
+                                android:text="Delivery"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/restDeliveryTime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="Delivery time(in minutes)"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/restDeliveryFee"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="Delivery fee"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp16">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/restMinOrder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="Minimum order.."
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp16"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Preorders?"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:id="@+id/preOrderSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/SwitchCompatGreen" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp16"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Veg only?"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:id="@+id/vegOnlySwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:theme="@style/SwitchCompatGreen" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4"
+                                android:text="Average price for two"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp16">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/priceForTwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:hint="price for two people.."
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorDarkText4"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4"
+                                android:text="Address details"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp4"
+                                android:orientation="horizontal">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <android.support.design.widget.TextInputEditText
+                                        android:id="@+id/restArea"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto"
+                                        android:hint="Area or vicinity.."
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColor="@color/colorDarkText4"
+                                        android:textSize="16sp" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <TextView
+                                    android:id="@+id/getLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginStart="@dimen/dp4"
+                                    android:layout_marginLeft="@dimen/dp4"
+                                    android:layout_marginBottom="@dimen/dp4"
+                                    android:background="@drawable/round_border_primary"
+                                    android:paddingLeft="@dimen/dp12"
+                                    android:paddingTop="@dimen/dp4"
+                                    android:paddingRight="@dimen/dp12"
+                                    android:paddingBottom="@dimen/dp4"
+                                    android:text="Add via Map"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/restAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_marginBottom="@dimen/dp16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="start"
+                                android:hint="Full address.."
+                                android:inputType="text"
+                                android:textColor="@color/colorDarkText4"
+                                android:textSize="16sp" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Other details"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <EditText
+                                android:id="@+id/restDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Other details about restaurant here.." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp16">
+
+        <include layout="@layout/progress_bar_horizontal" />
+
+        <Button
+            android:id="@+id/itemSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background_red"
+            android:text="Update Info"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
