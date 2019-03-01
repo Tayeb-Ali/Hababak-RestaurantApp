@@ -19,4 +19,36 @@
     <string name="avilable">متاح؟</string>
     <string name="detailed_specifications">الوصف التفصيلي</string>
     <string name="add_item">اضافة عنصر</string>
+
+
+    <string name="your_bank_account_detail">تفاصيل حسابك المصرفي</string>
+    <string name="provide_your_bank_detailwhere_admin_will_deposite_your_earnings_though_food_delivery_app"> قدم تفاصيل حسابك المصرفي حيث سيودع المشرف أرباحك من خلال تطبيق توصيل الطعام</string>
+    <string name="account_holder_name">اسم صاحب الحساب</string>
+    <string name="bank_name">اسم البنك</string>
+    <string name="branch_code">رمز الفرع</string>
+    <string name="account_number">رقم حساب</string>
+    <string name="update_info">تحديث المعلومات</string>
+
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="register">تسجيل</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="send_mail">ارسال بريد</string>
+    <string name="not_registered_yet">لم تسجل بعد؟</string>
+    <string name="back_to_login">العودة لتسجيل الدخول</string>
+
+    <string name="personal_details">تفاصيل شخصية</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="email">البريد الائلكتروني</string>
+    <string name="password">كلمة السر</string>
+    <string name="sign_up_now">أفتح حساب الأن</string>
+    <string name="forgot_password">نسية كلمة السر ؟</string>
+
+
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="register_now">سجل الان</string>
+    <string name="already_registered">لديك حساب بالفعل ؟</string>
+    <string name="sign_in_now">تسجيل الدخول الأن</string>
+    <string name="new_password">كلمة سر جديدة</string>
+    <string name="email_address">عنوان البريد الإلكتروني</string>
+
 </resources>

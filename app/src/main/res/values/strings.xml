@@ -19,4 +19,32 @@
     <string name="avilable">Avilable?</string>
     <string name="detailed_specifications">Detailed specifications</string>
     <string name="add_item">Add Item</string>
+
+
+    <string name="your_bank_account_detail">Your Bank Account Detail</string>
+    <string name="provide_your_bank_detailwhere_admin_will_deposite_your_earnings_though_food_delivery_app">Provide your bank detailwhere admin will deposite your earnings though food delivery app</string>
+    <string name="account_holder_name">Account Holder Name</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="branch_code">Branch Code</string>
+    <string name="account_number">Account Number</string>
+    <string name="update_info">Update Info</string>
+
+    <string name="personal_details">Personal Details</string>
+    <string name="full_name">Full name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+
+    <string name="forgot_password">Forgot Password</string>
+    <string name="don_t_worry_just_fill_in_your_registered_mail_id_and_we_ll_help_you_reset_your_password">Don\'t worry ! Just fill in your registered mail id and we\'ll help you reset your password</string>
+    <string name="enter_your_mail_address">Enter your mail address</string>
+    <string name="send_mail">Send mail</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="available_deliveries">Available deliveries</string>
+    <string name="password">Password</string>
+    <string name="not_registered_yet">Not registered yet?</string>
+    <string name="sign_up_now">Sign up Now</string>
+
 </resources>
