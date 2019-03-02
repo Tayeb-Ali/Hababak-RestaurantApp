@@ -10,11 +10,20 @@ apply plugin: 'kotlin-android-extensions'
 //}
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'bencolmbc3'
+            storeFile file('/home/ppain/keys/mykey.jks')
+            storePassword 'bencolmbc3'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.hababk.restaurant"
         resValue 'string', "app_name", "App Restaurant"
-        resValue 'string', "google_map_api_key", "AIzaSyB2mjZ3VCVfKJ6tQkFg9Kz-aIuj_F124bM"
+//        resValue 'string', "google_map_api_key", "AIzaSyB2mjZ3VCVfKJ6tQkFg9Kz-aIuj_F124bM"
+        resValue 'string', "google_map_api_key", "AIzaSyCqKt74vT8pdQYX8u1jjVfCa6-2phDEzAE"
         resValue 'color', "colorPrimary", "#6ac932"
         resValue 'color', "colorPrimaryDark", "#55A128"
         resValue 'color', "colorAccent", "#f95424"
@@ -23,40 +32,53 @@ android {
         versionCode 1
         versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        // Returns whether lint should be quiet (for example, not write informational messages such as paths to report files written)
+        quiet true
+
+        // Whether lint should set the exit code of the process if errors are found
+        abortOnError false
+
+        // Returns whether lint will only check for errors (ignoring warnings)
+        ignoreWarnings true
+
+        // Returns whether lint should check for fatal errors during release builds. Default is true.
+        // If issues with severity "fatal" are found, the release build is aborted.
+        checkReleaseBuilds false
+    }
+    productFlavors {
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
-
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
     implementation 'com.google.android.gms:play-services-places:16.0.0'
-//    implementation 'com.google.android.libraries.places:places:1.0.0'
-
+    //    implementation 'com.google.android.libraries.places:places:1.0.0'
     implementation 'com.google.firebase:firebase-core:16.0.7'
     implementation 'com.google.firebase:firebase-auth:16.1.0'
     implementation 'com.google.firebase:firebase-storage:16.1.0'
     implementation 'com.google.firebase:firebase-messaging:17.4.0'
-
     implementation 'com.iceteck.silicompressorr:silicompressor:2.1'
     implementation 'com.kbeanie:multipicker:1.5@aar'
-
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 }

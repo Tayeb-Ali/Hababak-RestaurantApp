@@ -46,9 +46,13 @@
 
     <string name="phone_number">رقم الهاتف</string>
     <string name="register_now">سجل الان</string>
+    <string name="enter_your_mail_address">Enter your mail address</string>
+    <string name="available_deliveries">Available deliveries</string>
+
     <string name="already_registered">لديك حساب بالفعل ؟</string>
     <string name="sign_in_now">تسجيل الدخول الأن</string>
     <string name="new_password">كلمة سر جديدة</string>
     <string name="email_address">عنوان البريد الإلكتروني</string>
+
 
 </resources>
