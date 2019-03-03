@@ -16,7 +16,7 @@ import com.hababk.restaurant.network.response.MenuItemCategory;
 import java.util.ArrayList;
 
 /**
- * Created by a_man on 15-03-2018.
+ * Created by Tayeb-Ali on 15-03-2018.
  */
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {

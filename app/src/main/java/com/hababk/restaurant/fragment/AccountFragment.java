@@ -22,7 +22,7 @@ import com.hababk.restaurant.utils.Helper;
 import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 /**
- * Created by user on 1/28/2018.
+ * Created by Tayeb-Ali on 1/28/2019.
  */
 
 public class AccountFragment extends Fragment implements View.OnClickListener {
@@ -77,8 +77,8 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
             case R.id.logout:
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
                 alertDialog.setTitle("Logout");
-                alertDialog.setMessage("Are your sure you want to logout?");
-                alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                alertDialog.setMessage(R.string.you_want_logout);
+                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Helper.logout(new SharedPreferenceUtil(getContext()));
@@ -89,7 +89,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
                         getActivity().finish();
                     }
                 });
-                alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

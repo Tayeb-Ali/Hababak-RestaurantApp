@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto"
-                android:hint="Email Address"
+                android:hint="@string/email_address"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto"
-                android:hint="New Password"
+                android:hint="@string/new_password"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto"
-                android:hint="Confirm"
+                android:hint="@string/confirm"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto"
-                android:hint="Phone number"
+                android:hint="@string/phone_number"
                 android:inputType="phone"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp16"
             android:background="@drawable/button_background_red"
-            android:text="Register Now"
+            android:text="@string/register_now"
             android:textAllCaps="false"
             android:textColor="@android:color/white" />
 
@@ -132,7 +132,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already registered?"
+                android:text="@string/already_registered"
                 android:textColor="@color/Gray" />
 
             <TextView
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp4"
-                android:text="Sign in Now"
+                android:text="@string/sign_in_now"
                 android:textColor="@color/colorAccent" />
         </LinearLayout>
 

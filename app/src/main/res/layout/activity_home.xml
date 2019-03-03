@@ -56,7 +56,7 @@
             android:paddingLeft="@dimen/dp16"
             android:paddingRight="@dimen/dp16"
             android:paddingTop="@dimen/dp8"
-            android:text="Orders"
+            android:text="@string/orders"
             android:textColor="@color/colorAccent"
             android:textSize="12sp" />
 
@@ -73,7 +73,7 @@
             android:paddingLeft="@dimen/dp16"
             android:paddingRight="@dimen/dp16"
             android:paddingTop="@dimen/dp8"
-            android:text="Delivery"
+            android:text="@string/delivery"
             android:textColor="@color/grayDark"
             android:textSize="12sp" />
 
@@ -90,7 +90,7 @@
             android:paddingLeft="@dimen/dp16"
             android:paddingRight="@dimen/dp16"
             android:paddingTop="@dimen/dp8"
-            android:text="Items"
+            android:text="@string/items"
             android:textColor="@color/grayDark"
             android:textSize="12sp" />
 
@@ -107,7 +107,7 @@
             android:paddingLeft="@dimen/dp16"
             android:paddingRight="@dimen/dp16"
             android:paddingTop="@dimen/dp8"
-            android:text="Account"
+            android:text="@string/account"
             android:textColor="@color/grayDark"
             android:textSize="12sp" />
     </LinearLayout>

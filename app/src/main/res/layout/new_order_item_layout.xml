@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@+id/new_order_payment_method_tv"
-                android:text="Payment "
+                android:text="@string/payment"
                 android:textSize="10sp" />
 
             <TextView
@@ -99,7 +99,7 @@
             android:layout_gravity="right|bottom"
             android:drawablePadding="@dimen/dp4"
             android:drawableRight="@drawable/ic_keyboard_arrow_right_accent_24dp"
-            android:text="View Order"
+            android:text="@string/view_order"
             android:textColor="@color/colorAccent"
             android:textStyle="bold" />
     </LinearLayout>

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import com.hababk.restaurant.model.User;
 
 /**
- * Created by a_man on 12-03-2018.
+ * Created by Tayeb-Ali on 01-03-2019.
  */
 
 public class AuthResponse {

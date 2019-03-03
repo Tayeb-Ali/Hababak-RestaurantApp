@@ -104,7 +104,7 @@ public class AddItemActivity extends AppCompatActivity implements ImagePickerCal
 
             itemSave.setText("Update Item");
             if (getSupportActionBar() != null)
-                getSupportActionBar().setTitle("Update Item");
+                getSupportActionBar().setTitle(getString(R.string.update_item));
         }
 
         restImagePicker.setOnClickListener(new View.OnClickListener() {

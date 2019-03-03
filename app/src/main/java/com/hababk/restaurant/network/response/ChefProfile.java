@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 /**
- * Created by a_man on 27-03-2018.
+ * Created by Tayeb-Ali on 27-03-2018.
  */
 
 public class ChefProfile implements Parcelable {

@@ -18,7 +18,7 @@
             android:paddingTop="@dimen/dp16"
             android:drawableLeft="@drawable/ic_person_primary_24dp"
             android:drawablePadding="@dimen/dp16"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textColor="@color/colorDarkText4"
             android:textSize="18sp"
             android:drawableStart="@drawable/ic_person_primary_24dp" />
@@ -30,7 +30,7 @@
             android:paddingBottom="@dimen/dp32"
             android:drawableLeft="@drawable/ic_thumb_up_primary_24dp"
             android:drawablePadding="@dimen/dp16"
-            android:text="Review"
+            android:text="@string/review"
             android:textColor="@color/colorDarkText4"
             android:textSize="18sp"
             android:drawableStart="@drawable/ic_thumb_up_primary_24dp" />
@@ -42,7 +42,7 @@
             android:layout_marginBottom="@dimen/dp32"
             android:drawableLeft="@drawable/ic_assignment_turned_in_primary_24dp"
             android:drawablePadding="@dimen/dp16"
-            android:text="Documents"
+            android:text="@string/documents"
             android:textColor="@color/colorDarkText4"
             android:textSize="18sp"
             android:visibility="gone"
@@ -55,7 +55,7 @@
             android:layout_marginBottom="@dimen/dp32"
             android:drawableLeft="@drawable/ic_account_balance_primary_24dp"
             android:drawablePadding="@dimen/dp16"
-            android:text="Bank details"
+            android:text="@string/bank_details"
             android:textColor="@color/colorDarkText4"
             android:textSize="18sp"
             android:drawableStart="@drawable/ic_account_balance_primary_24dp" />
@@ -67,7 +67,7 @@
             android:layout_marginBottom="@dimen/dp32"
             android:drawableLeft="@drawable/ic_account_balance_wallet_primary_24dp"
             android:drawablePadding="@dimen/dp16"
-            android:text="Earnings"
+            android:text="@string/earnings"
             android:textColor="@color/colorDarkText4"
             android:textSize="18sp"
             android:drawableStart="@drawable/ic_account_balance_wallet_primary_24dp" />
@@ -79,7 +79,7 @@
             android:layout_marginBottom="@dimen/dp32"
             android:drawableLeft="@drawable/ic_email_primary_24dp"
             android:drawablePadding="@dimen/dp16"
-            android:text="Support"
+            android:text="@string/support"
             android:textColor="@color/colorDarkText4"
             android:textSize="18sp"
             android:drawableStart="@drawable/ic_email_primary_24dp" />
@@ -102,7 +102,7 @@
             android:layout_marginBottom="@dimen/dp32"
             android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
             android:drawablePadding="@dimen/dp16"
-            android:text="Logout"
+            android:text="@string/logout"
             android:textColor="@color/colorDarkText4"
             android:textSize="18sp"
             android:drawableStart="@drawable/ic_exit_to_app_black_24dp" />

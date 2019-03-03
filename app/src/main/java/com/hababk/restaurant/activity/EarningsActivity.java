@@ -61,8 +61,8 @@ public class EarningsActivity extends AppCompatActivity {
                 getEarnings(pageNo);
             }
         });
-        adapter.addFragment(totalEarningFragment, "Total");
-        adapter.addFragment(historyEarningFragment, "History");
+        adapter.addFragment(totalEarningFragment, getString(R.string.total));
+        adapter.addFragment(historyEarningFragment, getString(R.string.history));
         mEarningsViewPager.setAdapter(adapter);
         mEarningsTabs.setupWithViewPager(mEarningsViewPager);
     }

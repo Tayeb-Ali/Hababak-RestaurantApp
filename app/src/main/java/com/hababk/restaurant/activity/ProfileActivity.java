@@ -124,6 +124,8 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
             public void onClick(View v) {
                 try {
                     startActivityForResult(new PlacePicker.IntentBuilder().build(ProfileActivity.this), PLACE_PICKER_REQUEST);
+                    latitude = 15.501501;
+                    longitude = 32.7126829;
                 } catch (GooglePlayServicesRepairableException e) {
                     e.printStackTrace();
                 } catch (GooglePlayServicesNotAvailableException e) {
@@ -252,7 +254,7 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
         if (checkStoragePermissions()) {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
             alertDialog.setMessage("Get image from");
-            alertDialog.setPositiveButton("Camera", new DialogInterface.OnClickListener() {
+            alertDialog.setPositiveButton(getString(R.string.camera), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
@@ -264,7 +266,7 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
                     pickerPath = cameraPicker.pickImage();
                 }
             });
-            alertDialog.setNegativeButton("Gallery", new DialogInterface.OnClickListener() {
+            alertDialog.setNegativeButton(getString(R.string.gallery), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
@@ -311,14 +313,14 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
                     Helper.setChefDetails(sharedPreferenceUtil, response.body());
                     finish();
                 } else {
-                    Toast.makeText(ProfileActivity.this, "Something went wrong updating details", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ProfileActivity.this, "Something went wrong updating details #101", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ChefProfile> call, Throwable t) {
                 setUpdateDetailsProgress(false);
-                Toast.makeText(ProfileActivity.this, "Something went wrong updating details", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProfileActivity.this, "Something went wrong updating details #102", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -440,8 +442,11 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
                     break;
                 case PLACE_PICKER_REQUEST:
                     Place place = PlacePicker.getPlace(this, data);
-                    latitude = place.getLatLng().latitude;
-                    longitude = place.getLatLng().longitude;
+//                    latitude = place.getLatLng().latitude;
+//                    longitude = place.getLatLng().longitude;
+
+                    latitude = 15.501501;
+                    longitude = 32.7126829;
                     Toast.makeText(ProfileActivity.this, "Location coordinates captured", Toast.LENGTH_SHORT).show();
                     restAddress.setText(place.getAddress());
                     break;

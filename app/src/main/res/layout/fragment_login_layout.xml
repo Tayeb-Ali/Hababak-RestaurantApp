@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none">
 
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp16"
             android:fontFamily="@font/roboto"
-            android:hint="Email Address"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textSize="16sp" />
 
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textSize="16sp" />
 
@@ -51,7 +51,7 @@
             android:layout_gravity="end"
             android:layout_marginBottom="@dimen/dp32"
             android:padding="@dimen/dp4"
-            android:text="Forgot Password?"
+            android:text="@string/forgot_password"
             android:textColor="@color/colorAccent" />
 
         <TextView
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp16"
             android:background="@drawable/button_background_red"
-            android:text="Sign in"
+            android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="@dimen/textSize14sp" />
@@ -86,7 +86,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Not registered yet?"
+                android:text="@string/not_registered_yet"
                 android:textColor="@color/Gray"
                 android:textSize="@dimen/textSize12sp" />
 
@@ -95,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp4"
-                android:text="Sign up Now"
+                android:text="@string/sign_up_now"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/textSize12sp" />
 

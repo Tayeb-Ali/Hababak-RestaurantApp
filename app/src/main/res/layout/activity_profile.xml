@@ -50,7 +50,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp8"
-                            android:text="Upload Restaurant Image"
+                            android:text="@string/upload_restaurant_image"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -92,7 +92,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/dp4"
-                                android:text="Restaurant Identity"
+                                android:text="@string/restaurant_identity"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <android.support.design.widget.TextInputLayout
@@ -105,7 +105,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="Restaurant name here.."
+                                    android:hint="@string/restaurant_name_here"
                                     android:inputType="text"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -122,7 +122,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="Sweet tag line here.."
+                                    android:hint="@string/sweet_tag_line_here"
                                     android:inputType="text"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -133,7 +133,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/dp4"
-                                android:text="Restaurant Hours"
+                                android:text="@string/restaurant_hours"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <android.support.design.widget.TextInputLayout
@@ -147,7 +147,7 @@
                                     android:layout_height="wrap_content"
                                     android:focusableInTouchMode="false"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="Opening time"
+                                    android:hint="@string/opening_time"
                                     android:inputType="text"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -165,7 +165,7 @@
                                     android:layout_height="wrap_content"
                                     android:focusableInTouchMode="false"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="Closing time"
+                                    android:hint="@string/closing_time"
                                     android:inputType="text"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -176,7 +176,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/dp4"
-                                android:text="Delivery"
+                                android:text="@string/delivery"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <android.support.design.widget.TextInputLayout
@@ -189,7 +189,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="Delivery time(in minutes)"
+                                    android:hint="@string/delivery_time_in_minutes"
                                     android:inputType="number"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -206,7 +206,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="Delivery fee"
+                                    android:hint="@string/delivery_fee"
                                     android:inputType="number"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -223,7 +223,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="Minimum order.."
+                                    android:hint="@string/minimum_order"
                                     android:inputType="number"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -240,7 +240,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="Preorders?"
+                                    android:text="@string/preorders"
                                     android:textColor="@color/colorPrimaryDark" />
 
                                 <android.support.v7.widget.SwitchCompat
@@ -260,7 +260,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="Veg only?"
+                                    android:text="@string/veg_only"
                                     android:textColor="@color/colorPrimaryDark" />
 
                                 <android.support.v7.widget.SwitchCompat
@@ -274,7 +274,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/dp4"
-                                android:text="Average price for two"
+                                android:text="@string/average_price_for_two"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <android.support.design.widget.TextInputLayout
@@ -287,7 +287,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/roboto"
-                                    android:hint="price for two people.."
+                                    android:hint="@string/price_for_two_people"
                                     android:inputType="number"
                                     android:maxLines="1"
                                     android:textColor="@color/colorDarkText4"
@@ -298,7 +298,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/dp4"
-                                android:text="Address details"
+                                android:text="@string/address_details"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <LinearLayout
@@ -317,7 +317,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/roboto"
-                                        android:hint="Area or vicinity.."
+                                        android:hint="@string/area_or_vicinity"
                                         android:inputType="text"
                                         android:maxLines="1"
                                         android:textColor="@color/colorDarkText4"
@@ -337,7 +337,7 @@
                                         android:paddingTop="@dimen/dp4"
                                         android:paddingRight="@dimen/dp12"
                                         android:paddingBottom="@dimen/dp4"
-                                        android:text="Add via Map"
+                                        android:text="@string/add_via_map"
                                         android:textColor="@color/colorPrimaryDark"
                                         android:textSize="16sp"
                                         android:textStyle="bold"/>
@@ -350,7 +350,7 @@
                                 android:layout_marginBottom="@dimen/dp16"
                                 android:fontFamily="@font/roboto"
                                 android:gravity="start"
-                                android:hint="Full address.."
+                                android:hint="@string/full_address"
                                 android:inputType="text"
                                 android:textColor="@color/colorDarkText4"
                                 android:textSize="16sp" />
@@ -359,14 +359,14 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Other details"
+                                android:text="@string/other_details"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <EditText
                                 android:id="@+id/restDetails"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Other details about restaurant here.." />
+                                android:hint="@string/other_details_about_restaurant_here" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -390,7 +390,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background_red"
-            android:text="Update Info"
+            android:text="@string/update_info"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp" />

@@ -22,13 +22,13 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * Created by user on 2/1/2018.
+ * Created by Tayeb-Ali on 2/1/2018.
  */
 
 public class OrderFragment extends BaseRecyclerFragment {
-    public static final String ACTIVE_ORDERS = "active";
-    public static final String COMPLETE_ORDERS = "complete";
-    public static final String DELIVERIES_ORDERS = "deliveries";
+    public static final String ACTIVE_ORDERS = "متاح";
+    public static final String COMPLETE_ORDERS = "منتهي";
+    public static final String DELIVERIES_ORDERS = "توصيل";
 
     private SharedPreferenceUtil sharedPreferenceUtil;
     private ChefStoreService chefService;

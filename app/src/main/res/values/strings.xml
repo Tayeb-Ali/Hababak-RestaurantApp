@@ -34,6 +34,12 @@
     <string name="account_number">Account Number</string>
     <string name="update_info">Update Info</string>
 
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="today">Today</string>
+    <string name="update_item">Update Item</string>
+
+
     <string name="personal_details">Personal Details</string>
     <string name="full_name">Full name</string>
     <string name="phone_number">Phone Number</string>
@@ -55,4 +61,53 @@
     <string name="already_registered">Already Registered ?</string>
     <string name="new_password">New Password</string>
     <string name="email_address">Email Address</string>
+    <string name="upload_restaurant_image">Upload Restaurant Image</string>
+    <string name="restaurant_identity">Restaurant Identity</string>
+    <string name="restaurant_name_here">Restaurant name here..</string>
+    <string name="sweet_tag_line_here">Sweet tag line here..</string>
+    <string name="restaurant_hours">Restaurant Hours</string>
+    <string name="opening_time">Opening time</string>
+    <string name="closing_time">Closing time</string>
+    <string name="delivery">Delivery</string>
+    <string name="delivery_time_in_minutes">Delivery time(in minutes)</string>
+    <string name="delivery_fee">Delivery fee</string>
+    <string name="minimum_order">Minimum order..</string>
+    <string name="preorders">Preorders?</string>
+    <string name="veg_only">Veg only?</string>
+    <string name="average_price_for_two">Average price for two</string>
+    <string name="price_for_two_people">price for two people..</string>
+    <string name="address_details">Address details</string>
+    <string name="area_or_vicinity">Area or vicinity..</string>
+    <string name="full_address">Full address..</string>
+    <string name="other_details">Other details</string>
+    <string name="other_details_about_restaurant_here">Other details about restaurant here..</string>
+    <string name="add_via_map">Add via Map</string>
+    <string name="select_suitable_categories">Select suitable categories</string>
+    <string name="done">Done</string>
+    <string name="profile">Profile</string>
+    <string name="review">Review</string>
+    <string name="documents">Documents</string>
+    <string name="bank_details">Bank details</string>
+    <string name="earnings">Earnings</string>
+    <string name="support">Support</string>
+    <string name="logout">Logout</string>
+    <string name="name">Name</string>
+    <string name="confirm">Confirm</string>
+    <string name="total_earnings_as_of">Total earnings as of:</string>
+    <string name="available2">Available</string>
+    <string name="price">Price</string>
+    <string name="non_veg_food">Non-Veg Food</string>
+    <string name="view_order">View Order</string>
+    <string name="payment">Payment</string>
+
+    <string name="orders">Orders</string>
+    <string name="deliveries">Deliveries</string>
+    <string name="items">Items</string>
+    <string name="account">Account</string>
+    <string name="activity_item_info">Item Info</string>
+    <string name="total">Total</string>
+    <string name="history">History</string>
+    <string name="you_want_logout">Are your sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

@@ -22,7 +22,8 @@ public class ItemInfoActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeButtonEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_left_white);
-            actionBar.setTitle("Item info");
+            actionBar.setTitle("");
+            setTitle(R.string.activity_item_info);
         }
     }
 

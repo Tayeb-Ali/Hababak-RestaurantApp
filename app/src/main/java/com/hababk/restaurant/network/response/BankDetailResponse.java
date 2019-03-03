@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by a_man on 14-03-2018.
+ * Created by Tayeb-Ali on 14-03-2018.
  */
 
 public class BankDetailResponse {

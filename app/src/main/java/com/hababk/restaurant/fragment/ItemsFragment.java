@@ -20,7 +20,7 @@ import com.hababk.restaurant.utils.Constants;
 import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 /**
- * Created by user on 1/28/2018.
+ * Created by Tayab-Ali on 1/28/2018.
  */
 
 public class ItemsFragment extends Fragment {

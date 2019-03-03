@@ -38,10 +38,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             {R.drawable.ic_person_24dp, R.drawable.ic_person_selected_24dp}};
     private NonSwipeableViewPager viewPager;
 
-    private final String FRAG_TAG_ORDERS = "Orders";
-    private final String FRAG_TAG_DELIVERY = "Deliveries";
-    private final String FRAG_TAG_ITEMS = "Items";
-    private final String FRAG_TAG_ACCOUNT = "Account";
+    private final String FRAG_TAG_ORDERS = "الطلبات";
+    private final String FRAG_TAG_DELIVERY = "التوصيل";
+    private final String FRAG_TAG_ITEMS = "العناصر";
+    private final String FRAG_TAG_ACCOUNT = "الحساب";
     private UniversalPagerAdapter adapter;
     private SharedPreferenceUtil sharedPreferenceUtil;
 

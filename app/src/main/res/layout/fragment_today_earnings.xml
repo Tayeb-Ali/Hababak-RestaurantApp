@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/dp4"
                 android:gravity="center"
-                android:text="Total earnings as of:"
+                android:text="@string/total_earnings_as_of"
                 android:textColor="@color/colorDarkText2"
                 android:textSize="16sp" />
 
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/dp16"
                 android:gravity="center"
-                android:text="loading..."
+                android:text="@string/loading"
                 android:textColor="@color/colorDarkText3"
                 android:textSize="16sp" />
 
