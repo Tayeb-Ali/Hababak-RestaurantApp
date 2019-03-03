@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Order Details"
+                android:text="@string/order_details"
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
 
@@ -83,7 +83,7 @@
                 android:background="@color/grayLight"
                 android:gravity="center"
                 android:padding="@dimen/dp12"
-                android:text="Cancel Order"
+                android:text="@string/cancel_order"
                 android:textColor="@color/colorAccent" />
 
             <TextView
@@ -94,7 +94,7 @@
                 android:background="@color/colorPrimary"
                 android:gravity="center"
                 android:padding="@dimen/dp12"
-                android:text="Accept Order"
+                android:text="@string/accept_order"
                 android:textColor="@color/White" />
 
         </LinearLayout>
@@ -133,7 +133,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Payment by "
+                    android:text="@string/payment_by"
                     android:textSize="10sp" />
 
                 <TextView

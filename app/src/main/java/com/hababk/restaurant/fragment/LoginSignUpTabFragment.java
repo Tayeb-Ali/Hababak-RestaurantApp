@@ -14,7 +14,7 @@ import com.hababk.restaurant.R;
 import com.hababk.restaurant.adapter.ViewPagerAdapter;
 
 /**
- * Created by user on 1/28/2018.
+ * Created by Tayeb-Ali on 1/28/2019.
  */
 
 public class LoginSignUpTabFragment extends Fragment {
@@ -43,8 +43,8 @@ public class LoginSignUpTabFragment extends Fragment {
 
     public void setUpViewPager() {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new SignInFragment(), "Sign in");
-        adapter.addFragment(new RegisterFragment(), "Register");
+        adapter.addFragment(new SignInFragment(), getString(R.string.sign_in));
+        adapter.addFragment(new RegisterFragment(), getString(R.string.register));
         mAuhViewPager.setAdapter(adapter);
         mAuhViewPager.post(new Runnable() {
             @Override

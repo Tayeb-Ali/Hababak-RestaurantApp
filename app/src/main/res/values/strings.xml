@@ -110,4 +110,10 @@
     <string name="you_want_logout">Are your sure you want to logout?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="accept_order">Accept Order</string>
+    <string name="order_details">Order Details</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="payment_by">Payment by</string>
+    <string name="sd">Sudan</string>
+    <string name="ksa">Saudi Arabia</string>
 </resources>

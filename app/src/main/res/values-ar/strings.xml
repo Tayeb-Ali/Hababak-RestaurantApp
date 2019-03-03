@@ -109,9 +109,15 @@
     <string name="activity_item_info">معلومات العنصر</string>
     <string name="total">المجموع</string>
     <string name="history">التاريح</string>
-    <string name="you_want_logout">Are your sure you want to logout?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="you_want_logout">هل انت متاكد من تسجيل خروجك</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="accept_order">قبول الطلب</string>
+    <string name="order_details">تفاصيل الطلب</string>
+    <string name="cancel_order">الغاء الطلب</string>
+    <string name="payment_by">وسيلة الدفع</string>
+    <string name="sd">السودان</string>
+    <string name="ksa">ارض الحجاز</string>
 
 
 </resources>
