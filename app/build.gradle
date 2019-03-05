@@ -1,4 +1,19 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 
 apply plugin: 'kotlin-android'
 
@@ -21,7 +36,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.hababk.restaurant"
-        resValue 'string', "app_name", "App Restaurant"
+//        resValue 'string', "app_name", "App Restaurant"
 //        resValue 'string', "google_map_api_key", "AIzaSyB2mjZ3VCVfKJ6tQkFg9Kz-aIuj_F124bM"
         resValue 'string', "google_map_api_key", "AIzaSyCqKt74vT8pdQYX8u1jjVfCa6-2phDEzAE"
         resValue 'color', "colorPrimary", "#6ac932"
@@ -29,34 +44,35 @@ android {
         resValue 'color', "colorAccent", "#f95424"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
+        versionCode 2
         versionName "OX"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
 
-    lintOptions {
-        // Returns whether lint should be quiet (for example, not write informational messages such as paths to report files written)
-        quiet true
-
-        // Whether lint should set the exit code of the process if errors are found
-        abortOnError false
-
-        // Returns whether lint will only check for errors (ignoring warnings)
-        ignoreWarnings true
-
-        // Returns whether lint should check for fatal errors during release builds. Default is true.
-        // If issues with severity "fatal" are found, the release build is aborted.
-        checkReleaseBuilds false
-    }
-    productFlavors {
-    }
+//    lintOptions {
+//        // Returns whether lint should be quiet (for example, not write informational messages such as paths to report files written)
+//        quiet true
+//
+//        // Whether lint should set the exit code of the process if errors are found
+//        abortOnError false
+//
+//        // Returns whether lint will only check for errors (ignoring warnings)
+//        ignoreWarnings true
+//
+//        // Returns whether lint should check for fatal errors during release builds. Default is true.
+//        // If issues with severity "fatal" are found, the release build is aborted.
+//        checkReleaseBuilds false
+//    }
+//    productFlavors {
+//    }
 }
 
 dependencies {
@@ -81,6 +97,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
 }
 
 apply plugin: 'com.google.gms.google-services'

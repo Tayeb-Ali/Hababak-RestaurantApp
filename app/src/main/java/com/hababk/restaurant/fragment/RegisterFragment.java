@@ -1,7 +1,9 @@
 package com.hababk.restaurant.fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,7 +24,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.hababk.restaurant.R;
+import com.hababk.restaurant.activity.HomeActivity;
 import com.hababk.restaurant.model.Country;
+import com.hababk.restaurant.model.User;
 import com.hababk.restaurant.network.ApiUtils;
 import com.hababk.restaurant.network.ChefStoreService;
 import com.hababk.restaurant.network.request.RegisterRequest;
@@ -56,6 +60,8 @@ public class RegisterFragment extends BaseFragment {
     private TextView mSignInTv, errorText;
     private ViewPager mViewPager;
     private ProgressBar progressBar;
+    private Activity mActivity;
+
 
     public RegisterFragment() {
     }
@@ -142,7 +148,7 @@ public class RegisterFragment extends BaseFragment {
     private ArrayList<Country> getCountries() {
         ArrayList<Country> toReturn = new ArrayList<>();
         toReturn.add(new Country("SD", getString(R.string.sd), "+249"));
-        toReturn.add(new Country("KSA", getString(R.string.ksa), "+966"));
+//        toReturn.add(new Country("KSA", getString(R.string.ksa), "+966"));
         return toReturn;
 //
 //        try {
@@ -179,15 +185,16 @@ public class RegisterFragment extends BaseFragment {
     public void onClickRegister(final RegisterRequest registerRequest) {
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
         alertDialog.setTitle(registerRequest.getMobile_number());
-        alertDialog.setMessage("Are your sure to use this number? As this will be used for phone number verification.\nKindly verify!");
-        alertDialog.setPositiveButton("Yes, m sure", new DialogInterface.OnClickListener() {
+        alertDialog.setMessage(getString(R.string.conferm_number)+"/n"+
+        registerRequest.getMobile_number());
+        alertDialog.setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 register(registerRequest);
             }
         });
-        alertDialog.setNegativeButton("No, need edits", new DialogInterface.OnClickListener() {
+        alertDialog.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -206,9 +213,14 @@ public class RegisterFragment extends BaseFragment {
                 if (response.isSuccessful()) {
                     sharedPreferenceUtil.setStringPreference(Constants.KEY_TOKEN, response.body().getToken());
                     Helper.setLoggedInUser(sharedPreferenceUtil, response.body().getUser());
-                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.splashFrame, VerificationCodeFragment.newInstance(response.body().getUser().getMobile_number()), VerificationCodeFragment.class.getName());
-                    fragmentTransaction.commit();
+                    SharedPreferenceUtil sharedPreferenceUtil = new SharedPreferenceUtil(getContext());
+                    User user = Helper.getLoggedInUser(sharedPreferenceUtil);
+                    user.setMobile_verified(1);
+                    Helper.setLoggedInUser(sharedPreferenceUtil, user);
+                    Intent intent = new Intent(getContext(), HomeActivity.class);
+                    getActivity().startActivity(intent);
+                    getActivity().finish();
+
                 } else {
                     if (errorText != null) {
                         errorText.setVisibility(View.VISIBLE);
@@ -222,9 +234,9 @@ public class RegisterFragment extends BaseFragment {
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            errorText.setText("Unable to register with provided credentials");
+                            errorText.setText(getString(R.string.unable_to_register));
                         } catch (IOException e) {
-                            errorText.setText("Unable to register with provided credentials");
+                            errorText.setText(getString(R.string.unable_to_register));
                             e.printStackTrace();
                         }
                     }
@@ -237,7 +249,7 @@ public class RegisterFragment extends BaseFragment {
                 setProgressRegister(false);
                 if (errorText != null) {
                     errorText.setVisibility(View.VISIBLE);
-                    errorText.setText("Something went wrong");
+                    errorText.setText(getString(R.string.wrong));
                 }
                 //toast("Something went wrong", true);
             }

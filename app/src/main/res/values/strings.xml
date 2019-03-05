@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">Hababak-Restaurant</string>
     <string name="item_edit">Edit</string>
     <string name="empty_order_active">No active orders found at the moment</string>
     <string name="empty_order_delivery">No orders out for delivery at the moment</string>
@@ -116,4 +117,17 @@
     <string name="payment_by">Payment by</string>
     <string name="sd">Sudan</string>
     <string name="ksa">Saudi Arabia</string>
+    <string name="conferm_number">Are your sure to use this number? As this will be used for phone number verification.
+        Kindly verify!
+    </string>
+    <string name="unable_to_register">Unable to register with provided credentials</string>
+    <string name="wrong">Something went wrong</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="please_type_the_verification_code">Please type the Verification Code</string>
+    <string name="enter_otp_here">enter otp here</string>
+    <string name="verify_now">Verify now</string>
+    <string name="approved">Approved Items</string>
+    <string name="pending">Pending Items</string>
+    <string name="new_orders">New Orders</string>
+    <string name="past_orders">Past Orders</string>
 </resources>

@@ -17,7 +17,7 @@ import com.hababk.restaurant.utils.Constants;
 import com.hababk.restaurant.utils.SharedPreferenceUtil;
 
 /**
- * Created by user on 1/28/2018.
+ * Created by Tayeb-Ali on 1/28/2018.
  */
 
 public class OrdersFragment extends Fragment {
@@ -65,8 +65,8 @@ public class OrdersFragment extends Fragment {
 
     public void setUpViewPager() {
         adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(OrderFragment.newStatusInstance(OrderFragment.ACTIVE_ORDERS), "New Orders");
-        adapter.addFragment(OrderFragment.newStatusInstance(OrderFragment.COMPLETE_ORDERS), "Past Orders");
+        adapter.addFragment(OrderFragment.newStatusInstance(OrderFragment.ACTIVE_ORDERS), getString(R.string.new_orders));
+        adapter.addFragment(OrderFragment.newStatusInstance(OrderFragment.COMPLETE_ORDERS), getString(R.string.past_orders));
         mOrderViewPager.setAdapter(adapter);
         mOrderTabs.setupWithViewPager(mOrderViewPager);
         mOrderViewPager.post(new Runnable() {

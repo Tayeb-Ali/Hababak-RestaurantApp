@@ -73,8 +73,8 @@ public class ItemsFragment extends Fragment {
 
     public void setUpViewPager() {
         adapter = new UniversalPagerAdapter(getChildFragmentManager());
-        adapter.addFrag(MenuItemsFragment.newInstance("approved"), "Approved Items");
-        adapter.addFrag(MenuItemsFragment.newInstance("pending"), "Pending Items");
+        adapter.addFrag(MenuItemsFragment.newInstance("approved"), getString(R.string.approved));
+        adapter.addFrag(MenuItemsFragment.newInstance("pending"), getString(R.string.pending));
         mItemViewPager.setAdapter(adapter);
         mItemTabs.setupWithViewPager(mItemViewPager);
         mItemViewPager.post(new Runnable() {

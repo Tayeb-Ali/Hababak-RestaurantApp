@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Verification Code"
+            android:text="@string/verification_code"
             android:textColor="@android:color/black"
             android:textSize="@dimen/textSize20sp"
             android:textStyle="bold" />
@@ -50,7 +50,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:gravity="center"
-            android:text="Please type the Verification Code "
+            android:text="@string/please_type_the_verification_code"
             android:textColor="@color/Gray"
             android:textSize="@dimen/textSize14sp" />
 
@@ -79,22 +79,22 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:hint="enter otp here"
+                android:hint="@string/enter_otp_here"
                 android:inputType="number" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/verification_code_btn"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/mar_40"
-            android:layout_below="@+id/verification_code_et_view"
-            android:layout_marginTop="@dimen/mar_30"
-            android:background="@drawable/button_background_red"
-            android:text="Verify now"
-            android:textAllCaps="false"
-            android:textColor="@color/White"
-            android:textSize="@dimen/textSize16sp" />
+                android:id="@+id/verification_code_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mar_40"
+                android:layout_below="@+id/verification_code_et_view"
+                android:layout_marginTop="@dimen/mar_30"
+                android:background="@drawable/button_background_red"
+                android:text="@string/verify_now"
+                android:textAllCaps="false"
+                android:textColor="@color/White"
+                android:textSize="@dimen/textSize16sp"/>
 
         <TextView
             android:id="@+id/timeLeft"

@@ -1,5 +1,6 @@
 <resources>
-    <string name="item_edit">Edit</string>
+    <string name="app_name">حبابك-المطعم</string>
+    <string name="item_edit">تعديل</string>
     <string name="empty_order_active">لم يتم العثور على أوامر نشطة في الوقت الحالي</string>
     <string name="empty_order_delivery">لا توجد طلبات خارج للتسليم في الوقت الحالي</string>
     <string name="empty_order_complete">لم تكتمل أي طلبات في الوقت الحالي</string>
@@ -36,7 +37,7 @@
 
     <string name="sign_in">تسجيل الدخول</string>
     <string name="register">تسجيل</string>
-    <string name="camera">الكميرة</string>
+    <string name="camera">الكاميرا</string>
     <string name="gallery">معرض الصور</string>
     <string name="today">اليوم</string>
 
@@ -48,7 +49,7 @@
 
     <string name="personal_details">تفاصيل شخصية</string>
     <string name="full_name">الاسم الكامل</string>
-    <string name="email">البريد الائلكتروني</string>
+    <string name="email">البريد الالكتروني</string>
     <string name="password">كلمة السر</string>
     <string name="sign_up_now">أفتح حساب الأن</string>
     <string name="forgot_password">نسية كلمة السر ؟</string>
@@ -56,7 +57,7 @@
 
     <string name="phone_number">رقم الهاتف</string>
     <string name="register_now">سجل الان</string>
-    <string name="enter_your_mail_address">ادخل البريد الالكتروني</string>
+    <string name="enter_your_mail_address">ادخل البريد الاكتروني</string>
     <string name="available_deliveries">التوصيل متاح</string>
 
     <string name="already_registered">لديك حساب بالفعل ؟</string>
@@ -83,8 +84,8 @@
     <string name="full_address">العنوان الكامل</string>
     <string name="other_details">تفاصيل اضافية اخري</string>
     <string name="other_details_about_restaurant_here">تفاصيل اضافية اخري حول المطعم هنا..</string>
-    <string name="add_via_map">Add via Map</string>
-    <string name="select_suitable_categories">Select suitable categories</string>
+    <string name="add_via_map">تاكيد</string>
+    <string name="select_suitable_categories">اختر فئات مناسبة</string>
     <string name="done">انتهاء</string>
     <string name="profile">الملف الشخصي</string>
     <string name="review">المراجعات</string>
@@ -118,6 +119,19 @@
     <string name="payment_by">وسيلة الدفع</string>
     <string name="sd">السودان</string>
     <string name="ksa">ارض الحجاز</string>
+
+    <string name="conferm_number">هل انت متاكد من هذا الرقم؟ سوف يتخدم في عملية التحقق
+    </string>
+    <string name="unable_to_register">لا يمكن التسجيل بهذه البيانات , قد تكون عضو بالفعل, راجع الدعم الفني</string>
+    <string name="wrong">حدث خطأ #103</string>
+    <string name="verification_code">رمز التحقق</string>
+    <string name="please_type_the_verification_code">ادخل رمز التحقق في حالة كان الحقل فارغ</string>
+    <string name="enter_otp_here">رمز التحقق</string>
+    <string name="verify_now">تاكيد الحساب</string>
+    <string name="approved">العناصر المؤكدة</string>
+    <string name="pending">في الانتظار</string>
+    <string name="new_orders">الطلبات الجديدة</string>
+    <string name="past_orders">الطلبات السابقة</string>
 
 
 </resources>
