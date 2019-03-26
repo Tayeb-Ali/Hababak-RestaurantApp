@@ -1,34 +1,33 @@
 package com.hababk.restaurant.activity;
 
+import android.Manifest;
+import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.os.IBinder;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.hababk.restaurant.R;
 import com.hababk.restaurant.adapter.UniversalPagerAdapter;
 import com.hababk.restaurant.fragment.AccountFragment;
 import com.hababk.restaurant.fragment.ItemsFragment;
 import com.hababk.restaurant.fragment.OrderFragment;
 import com.hababk.restaurant.fragment.OrdersFragment;
-import com.hababk.restaurant.model.User;
-import com.hababk.restaurant.network.ApiUtils;
-import com.hababk.restaurant.network.ChefStoreService;
-import com.hababk.restaurant.network.request.FcmTokenUpdateRequest;
 import com.hababk.restaurant.network.response.ChefProfile;
 import com.hababk.restaurant.utils.Helper;
 import com.hababk.restaurant.utils.SharedPreferenceUtil;
 import com.hababk.restaurant.view.NonSwipeableViewPager;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+//import com.google.firebase.iid.FirebaseInstanceId;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView[] bottomViews = new TextView[4];
@@ -60,7 +59,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         initUi();
         setupViewPager();
         Helper.preLoadCategories(sharedPreferenceUtil);
-        updateFcmToken();
+//        updateFcmToken();
     }
 
     private void setupViewPager() {
@@ -128,17 +127,96 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void updateFcmToken() {
-        ApiUtils.getClient().create(ChefStoreService.class).updateFcmToken(Helper.getApiToken(sharedPreferenceUtil), new FcmTokenUpdateRequest(FirebaseInstanceId.getInstance().getToken())).enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                Log.e("FcmTokenUpdate", String.valueOf(response.isSuccessful()));
-            }
+//    private void updateFcmToken() {
+//        ApiUtils.getClient().create(ChefStoreService.class).updateFcmToken(Helper.getApiToken(sharedPreferenceUtil), new FcmTokenUpdateRequest(FirebaseInstanceId.getInstance().getToken())).enqueue(new Callback<User>() {
+//            @Override
+//            public void onResponse(Call<User> call, Response<User> response) {
+//                Log.e("FcmTokenUpdate", String.valueOf(response.isSuccessful()));
+//            }
+//
+//            @Override
+//            public void onFailure(Call<User> call, Throwable t) {
+//                Log.e("FcmTokenUpdate", t.getMessage());
+//            }
+//        });
+//    }
 
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-                Log.e("FcmTokenUpdate", t.getMessage());
+    /**
+     * Created by Arbab on 3/22/2019.
+     */
+
+    public static class GPSTracker extends Service implements LocationListener {
+
+
+        private final Context context;
+
+        boolean isGPSEnabled =false;
+        boolean isNetworkEnabled =false;
+        boolean canGetLocation = false;
+
+        Location location;
+        protected LocationManager locationManager;
+
+        public GPSTracker(Context context){
+            this.context=context;
+        }
+
+        //Create a GetLocation Method //
+        public  Location getLocation(){
+            try{
+
+                locationManager = (LocationManager) context.getSystemService(LOCATION_SERVICE);
+                isGPSEnabled = locationManager.isProviderEnabled(locationManager.GPS_PROVIDER);
+                isNetworkEnabled=locationManager.isProviderEnabled(locationManager.NETWORK_PROVIDER);
+
+                if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                        || ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED ){
+
+                    if(isGPSEnabled){
+                        if(location==null){
+                            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000,10,this);
+                            if(locationManager!=null){
+                                location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                            }
+                        }
+                    }
+                    // if lcoation is not found from GPS than it will found from network //
+                    if(location==null){
+                        if(isNetworkEnabled){
+
+                            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 10000,10,this);
+                            if(locationManager!=null){
+                                location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+                            }
+
+                        }
+                    }
+
+                }
+
+            }catch(Exception ex){
+
             }
-        });
+            return  location;
+        }
+
+        // followings are the default method if we imlement LocationListener //
+        public void onLocationChanged(Location location){
+
+        }
+
+        public void onStatusChanged(String Provider, int status, Bundle extras){
+
+        }
+        public void onProviderEnabled(String Provider){
+
+        }
+        public void onProviderDisabled(String Provider){
+
+        }
+        public IBinder onBind(Intent arg0){
+            return null;
+        }
+
     }
 }

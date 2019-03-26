@@ -48,6 +48,9 @@
             android:name="com.hababk.restaurant.activity.ItemInfoActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.hababk.restaurant.activity.MapsActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.hababk.restaurant.activity.ProfileActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
@@ -73,17 +76,6 @@
             android:name="com.hababk.restaurant.activity.OrderDetailActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-
-        <service android:name="com.hababk.restaurant.service.MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name="com.hababk.restaurant.service.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="562cb3f90b4dbd7f6c4d6eaf9bc29a1e1630877c" />

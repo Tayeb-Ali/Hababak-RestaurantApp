@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.ActivityCompat;
@@ -14,31 +15,15 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TimePicker;
-import android.widget.Toast;
-
+import android.widget.*;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlacePicker;
-import com.kbeanie.multipicker.api.CameraImagePicker;
-import com.kbeanie.multipicker.api.ImagePicker;
-import com.kbeanie.multipicker.api.Picker;
-import com.kbeanie.multipicker.api.callbacks.ImagePickerCallback;
-import com.kbeanie.multipicker.api.entity.ChosenImage;
 import com.hababk.restaurant.R;
 import com.hababk.restaurant.network.ApiUtils;
 import com.hababk.restaurant.network.ChefStoreService;
@@ -47,27 +32,35 @@ import com.hababk.restaurant.network.response.ChefProfile;
 import com.hababk.restaurant.utils.FirebaseUploader;
 import com.hababk.restaurant.utils.Helper;
 import com.hababk.restaurant.utils.SharedPreferenceUtil;
+import com.kbeanie.multipicker.api.CameraImagePicker;
+import com.kbeanie.multipicker.api.ImagePicker;
+import com.kbeanie.multipicker.api.Picker;
+import com.kbeanie.multipicker.api.callbacks.ImagePickerCallback;
+import com.kbeanie.multipicker.api.entity.ChosenImage;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 public class ProfileActivity extends AppCompatActivity implements ImagePickerCallback {
+    private static final String TAG = "Profile Activity";
     private ProgressBar restImageProgress, progressBar;
     private SwipeRefreshLayout restDetailsLoadingProgress;
     private Button itemSave;
     private EditText restAddress, restDetails;
     private TextInputEditText restDeliveryTime, restDeliveryFee, restMinOrder, restName, restTagLine, restArea, restHourOpen, restHourClose, priceForTwo;
     private View restImagePicker;
+    private TextView map;
     private ImageView itemImage;
     private SwitchCompat preOrderSwitch, vegOnlySwitch;
 
-    private String pickerPath;
+    private String pickerPath, str_resName;
     private ImagePicker imagePicker;
     private CameraImagePicker cameraPicker;
     private File mediaFile;
@@ -79,6 +72,7 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
 
     private final int REQUEST_CODE_PERMISSION = 55, PLACE_PICKER_REQUEST = 66, MY_PERMISSIONS_REQUEST_LOCATION = 44;
     private Double latitude, longitude;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +89,10 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
             actionBar.setTitle("Profile");
         }
 
+
         sharedPreferenceUtil = new SharedPreferenceUtil(this);
+
+
         storeService = ApiUtils.getClient().create(ChefStoreService.class);
 
         restImageProgress = findViewById(R.id.restImageProgress);
@@ -118,21 +115,17 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
         itemImage = findViewById(R.id.restImage);
         vegOnlySwitch = findViewById(R.id.vegOnlySwitch);
         preOrderSwitch = findViewById(R.id.preOrderSwitch);
+        restAddress.setText(str_resName);
+        map = (TextView) findViewById(R.id.getLocation);
 
-        findViewById(R.id.getLocation).setOnClickListener(new View.OnClickListener() {
+        map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    startActivityForResult(new PlacePicker.IntentBuilder().build(ProfileActivity.this), PLACE_PICKER_REQUEST);
-                    latitude = 15.501501;
-                    longitude = 32.7126829;
-                } catch (GooglePlayServicesRepairableException e) {
-                    e.printStackTrace();
-                } catch (GooglePlayServicesNotAvailableException e) {
-                    e.printStackTrace();
-                }
+                startAutocompleteActivity();
             }
         });
+
+
         restImagePicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,6 +161,8 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
         itemSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 if (TextUtils.isEmpty(restName.getText())) {
                     Toast.makeText(ProfileActivity.this, "Provide restaurant name", Toast.LENGTH_SHORT).show();
                     return;
@@ -228,7 +223,14 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
             }
         });
 
+
         initDetails();
+
+    }
+
+    private void startAutocompleteActivity() {
+        Intent intent = new Intent(ProfileActivity.this, MapsActivity.class);
+        startActivityForResult(intent, PLACE_PICKER_REQUEST);
     }
 
     private void pickTime(final int i) {
@@ -254,7 +256,7 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
         if (checkStoragePermissions()) {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
             alertDialog.setMessage("Get image from");
-            alertDialog.setPositiveButton(getString(R.string.camera), new DialogInterface.OnClickListener() {
+            alertDialog.setPositiveButton("Camera", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
@@ -266,7 +268,7 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
                     pickerPath = cameraPicker.pickImage();
                 }
             });
-            alertDialog.setNegativeButton(getString(R.string.gallery), new DialogInterface.OnClickListener() {
+            alertDialog.setNegativeButton("Gallery", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
@@ -285,6 +287,8 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
     }
 
     private void updateProfile() {
+
+
         ChefProfileUpdateRequest chefProfileUpdateRequest = new ChefProfileUpdateRequest();
         chefProfileUpdateRequest.setAddress(restAddress.getText().toString());
         chefProfileUpdateRequest.setArea(restArea.getText().toString());
@@ -313,14 +317,14 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
                     Helper.setChefDetails(sharedPreferenceUtil, response.body());
                     finish();
                 } else {
-                    Toast.makeText(ProfileActivity.this, "Something went wrong updating details #101", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ProfileActivity.this, "Something went wrong updating details 11111", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ChefProfile> call, Throwable t) {
                 setUpdateDetailsProgress(false);
-                Toast.makeText(ProfileActivity.this, "Something went wrong updating details #102", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProfileActivity.this, "Something went wrong updating details 22222", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -381,6 +385,8 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
         preOrderSwitch.setChecked(savedDetails.getPreorder() == 1);
         latitude = savedDetails.getLatitude();
         longitude = savedDetails.getLongitude();
+//        latitude = double_latitude;
+//        longitude = double_longitude;
     }
 
     private void setImageUpdateProgress(boolean b) {
@@ -406,14 +412,8 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                        try {
-                            startActivityForResult(new PlacePicker.IntentBuilder().build(this), PLACE_PICKER_REQUEST);
-                        } catch (GooglePlayServicesRepairableException e) {
-                            e.printStackTrace();
-                        } catch (GooglePlayServicesNotAvailableException e) {
-                            e.printStackTrace();
-                        }
+                    if (ContextCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                        startAutocompleteActivity();
                     }
                 }
                 break;
@@ -441,14 +441,16 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
                     cameraPicker.submit(data);
                     break;
                 case PLACE_PICKER_REQUEST:
-                    Place place = PlacePicker.getPlace(this, data);
-//                    latitude = place.getLatLng().latitude;
-//                    longitude = place.getLatLng().longitude;
 
-                    latitude = 15.501501;
-                    longitude = 32.7126829;
+                    Double result_latitude = data.getDoubleExtra("latitude", latitude);
+                    Double result_longitude = data.getDoubleExtra("longitude", latitude);
+                    String result_address = data.getStringExtra("address");
+                    longitude = result_longitude;
+                    latitude = result_latitude;
                     Toast.makeText(ProfileActivity.this, "Location coordinates captured", Toast.LENGTH_SHORT).show();
-                    restAddress.setText(place.getAddress());
+                    restAddress.setText(result_address);
+
+
                     break;
             }
         }
@@ -534,5 +536,4 @@ public class ProfileActivity extends AppCompatActivity implements ImagePickerCal
                         &&
                         ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
     }
-
 }

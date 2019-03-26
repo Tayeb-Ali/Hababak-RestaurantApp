@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatSpinner;
@@ -17,12 +16,7 @@ import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-
+import android.widget.*;
 import com.hababk.restaurant.R;
 import com.hababk.restaurant.activity.HomeActivity;
 import com.hababk.restaurant.model.Country;
@@ -34,19 +28,15 @@ import com.hababk.restaurant.network.response.AuthResponse;
 import com.hababk.restaurant.utils.Constants;
 import com.hababk.restaurant.utils.Helper;
 import com.hababk.restaurant.utils.SharedPreferenceUtil;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Tayeb-Ali on 1/25/2018.
@@ -249,7 +239,7 @@ public class RegisterFragment extends BaseFragment {
                 setProgressRegister(false);
                 if (errorText != null) {
                     errorText.setVisibility(View.VISIBLE);
-                    errorText.setText(getString(R.string.wrong));
+                    errorText.setText(getString(R.string.wrong)+"#1");
                 }
                 //toast("Something went wrong", true);
             }

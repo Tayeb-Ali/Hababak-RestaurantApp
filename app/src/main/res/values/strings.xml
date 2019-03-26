@@ -130,4 +130,6 @@
     <string name="pending">Pending Items</string>
     <string name="new_orders">New Orders</string>
     <string name="past_orders">Past Orders</string>
+    <string name="next">Next</string>
+    <string name="submit">submit</string>
 </resources>

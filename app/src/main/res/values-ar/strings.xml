@@ -132,6 +132,8 @@
     <string name="pending">في الانتظار</string>
     <string name="new_orders">الطلبات الجديدة</string>
     <string name="past_orders">الطلبات السابقة</string>
+    <string name="next">التالي</string>
+    <string name="submit">submit</string>
 
 
 </resources>
