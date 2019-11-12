@@ -87,7 +87,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.7'
     implementation 'com.google.firebase:firebase-auth:16.1.0'
     implementation 'com.google.firebase:firebase-storage:16.1.0'
-    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.1'
 
     implementation 'com.iceteck.silicompressorr:silicompressor:2.1'
     implementation 'com.kbeanie:multipicker:1.5@aar'
